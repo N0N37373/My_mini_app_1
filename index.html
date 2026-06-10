@@ -4,10 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мой Mini App</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 15px;
+        }
+        .photo {
+            width: 200px;
+            max-width: 100%;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+    </style>
 </head>
 <body>
     <h1>Привет, мир!</h1>
     <p id="user-info"></p>
+    
+    <!-- Замени ссылку ниже на свою -->
+    <img class="photo" src="https://i.imgur.com/ТУТ_ТВОЯ_ССЫЛКА.jpg" alt="фото">
+
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
         const tg = window.Telegram.WebApp;
