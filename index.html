@@ -5,25 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мой Mini App</title>
     <style>
-        #loader {
-            position: fixed;
-            top:0; left:0;
-            width: 100%; height:100%;
-            background-color: #000;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            font-family: sans-serif;
-            z-index: 9999;
-            transition: opacity 0.5s ease;
-        }
-
-        #loader.fade-out {
-            opacity: 0;
-            pointer-events: none;
-        }
+        
         
         h1 {
             color: white;
@@ -49,11 +31,6 @@
     </style>
 </head>
 <body>
-    <div id='loader'>
-        <p id='loader-text'>Загрузка...</p>
-    </div>
-    
-    
     
     <h1>Привет, мир!</h1>
     <p id="user-info"></p>
@@ -78,36 +55,6 @@
 
         document.body.style.backgroundColor = tg.backgroundColor;
         document.body.style.color = tg.textColor;
-
-        const loader = document.getElementByld('loader');
-        const loaderText = document.getElementByld('loader-text');
-
-        const phrases = [
-            'Загружаем...',
-            'Почти готово...',
-            'Подожди секунду...'
-        ];
-
-        function setRandomPhrase() {
-            const randomIndex = Math.floor(Math.random() * phrases.lenth);
-            loaderText.textContent = phrases[randomIndex];
-        }
-
-        let interval = setInterval(setRandomPhrase, 1000);
-        setRandomPhrase();
-
-        function HideLoader() {
-           clearInterval(interval);
-        loader.classList.add('fade-out');
-    
-        setTimeout(() => {
-            loader.style.display = 'none';
-            }, 500);
-        }
-
-        window.addEventListener('load', () => {
-            setTimeout(hideLoader, 800);
-        });
 
     </script>
 </body>
