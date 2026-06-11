@@ -1,79 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой Mini App</title>
+    <title>Привет мир</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <style>
-        #splash-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #000000; /* Чёрный фон */
-            color: #ffffff; /* Белый текст */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            transition: opacity 0.3s ease-in-out;
-            font-family: sans-serif;
-            font-size: 18px;
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: system-ui, sans-serif;
+            background: var(--tg-theme-bg-color, white);
+            color: var(--tg-theme-text-color, black);
+            text-align: center;
         }
 
-        /* --- Основной контент (изначально скрыт) --- */
-        #app-content {
-            display: none;
-        }
-        
         h1 {
             color: #fff;
-        }
-        body {
-            color: #000;
-            font-family: sans-serif;
-            padding: 15px;
-        }
-        .photo {
-            width: 200px;
-            max-width: 100%;
-            border-radius: 10px;
-            margin-top: 15px;
-        }
-        p {
-            color: #fff;
-            border: black;
         }
     </style>
 </head>
 <body>
-    
-    <h1>Привет, мир!</h1>
-    <p id="user-info"></p>
-    
-    <!-- Замени ссылку ниже на свою -->
+    <h1>Привет мир</h1>
+
     <a href="https://ibb.co/DD86wv7b">
         <img src="https://i.ibb.co/BVr7TQgP/wzh6ekwnz9rmy0cynzyb8h87m0-result-0.png" alt="wzh6ekwnz9rmy0cynzyb8h87m0-result-0" border="0">
     </a>
-    <p>Фото :)</p>
-
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+   
     <script>
         const tg = window.Telegram.WebApp;
         tg.ready();
         tg.expand();
-
-        const user = tg.initDataUnsafe?.user;
-        if (user) {
-            document.getElementById('user-info').innerText =
-                `Привет, ${user.first_name}! Ты открыл приложение через Telegram.`;
-        }
-
-        document.body.style.backgroundColor = tg.backgroundColor;
-        document.body.style.color = tg.textColor;
-
     </script>
 </body>
 </html>
+    
