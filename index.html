@@ -80,34 +80,34 @@
         document.body.style.color = tg.textColor;
 
         const loader = document.getElementByld('loader');
-    const loaderText = document.getElementByld('loader-text');
+        const loaderText = document.getElementByld('loader-text');
 
-    const phrases = [
-        'Загружаем...',
-        'Почти готово...',
-        'Подожди секунду...'
-    ];
+        const phrases = [
+            'Загружаем...',
+            'Почти готово...',
+            'Подожди секунду...'
+        ];
 
-    function setRandomPhrase() {
-        const randomIndex = Math.floor(Math.random() * phrases.lenth);
-        loaderText.textContent = phrases[randomIndex];
-    }
+        function setRandomPhrase() {
+            const randomIndex = Math.floor(Math.random() * phrases.lenth);
+            loaderText.textContent = phrases[randomIndex];
+        }
 
-    let interval = setInterval(setRandomPhrase, 1000);
-    setRandomPhrase();
+        let interval = setInterval(setRandomPhrase, 1000);
+        setRandomPhrase();
 
-    function HideLoader() {
-        clearInterval(interval);
-    loader.classList.add('fade-out');
+        function HideLoader() {
+           clearInterval(interval);
+        loader.classList.add('fade-out');
     
-    setTimeout(() => {
-        loader.style.display = 'none';
-        }, 500);
-    }
+        setTimeout(() => {
+            loader.style.display = 'none';
+            }, 500);
+        }
 
-    window.addEventListener('load', () => {
-        setTimeout(hideLoader, 800);
-    });
+        window.addEventListener('load', () => {
+            setTimeout(hideLoader, 800);
+        });
 
     </script>
 </body>
